@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Amusing Magic 8-Ball</title>
+        <style>
+            body {
+                background-color: #fafafa;
+                font-family: Arial, sans-serif;
+            }
+            #ball {
+                width: 300px;
+                height: 300px;
+                background: url('https://i.pinimg.com/originals/88/0f/01/880f01aa7bbd9404216791303cd47fa0.png') no-repeat;
+                background-size: contain;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 300px;
+                font-size: 24px;
+                color: white;
+                border-radius: 50%;
+                box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+                cursor: pointer;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">The Amusing Magic 8-Ball</h1>
+        <h3 align="center">Ask a yes or no question, then click on the ball!</h3>
+        <div id="ball">Ask me!</div>
+
+        <script>
+            var answers = [
+                "It is certain.", 
+                "It is decidedly so.", 
+                "Without a doubt.", 
+                "Yes, definitely.", 
+                "You may rely on it.", 
+                "As I see it, yes.", 
+                "Most likely.", 
+                "Outlook good.", 
+                "Yes.", 
+                "Signs point to yes.", 
+                "Reply hazy, try again.", 
+                "Ask again later.", 
+                "Better not tell you now.", 
+                "Cannot predict now.", 
+                "Concentrate and ask again.", 
+                "Don't count on it.", 
+                "My reply is no.", 
+                "My sources say no.", 
+                "Outlook not so good.", 
+                "Very doubtful."
+            ];
+
+            document.getElementById("ball").onclick = function() {
+                var answer = answers[Math.floor(Math.random() * answers.length)];
+                this.innerHTML = answer;
+            }
+        </script>
+    </body>
+</html>
